@@ -14,7 +14,9 @@ const app=Vue.createApp({
         const {results} = await res.json()
         console.log(res)
 
-            this.name=results[0].name;
+            this.name=results[0].name.first;
+            this.name=results[0].name.last;
+
             this.email=results[0].email;
             this.gender=results[0].gender;
             this.picture=results[0].picture.large
