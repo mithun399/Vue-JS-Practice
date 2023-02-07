@@ -3,6 +3,7 @@ const app=Vue.createApp({
     data(){
         return{
             name:'Mithun',
+            
             email:'ms@gmail.com',
             gender:'male',
             picture:'img.jpg'
