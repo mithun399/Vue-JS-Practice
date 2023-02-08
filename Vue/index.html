@@ -25,10 +25,14 @@
         <!-- <div v-if="showbooks">
         <h1>{{title}} - {{author}} - {{age}}</h1>
        </div> -->
+
+       <!-- Atrribute Binding -->
+       <a  :href="url">Github</a>
       
        <div v-if="showbooks">
             <ul>
               <li v-for="book in books">
+                <img :src="book.img" :alt="book.title" style="height: 60px;width:60px;">
                 <h3>{{ book.title }}</h3>
                 <h4>{{ book.author }}</h4>
                 <p>{{ book.age }}</p>

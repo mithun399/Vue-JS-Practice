@@ -1,6 +1,7 @@
 const app=Vue.createApp({
     data() {
         return {
+            url:'https://github.com/mithun399',
             showbooks:true,
             // title:'Learn Vue ',
             // author:'Mithun',
@@ -9,9 +10,9 @@ const app=Vue.createApp({
             y:0,
 
             books:[
-                {title: 'name of the wind',author:'Mithun',age:24},
-                {title: 'the way of king',author:'Sonia',age:22},
-                {title: 'the final empire',author:'MS',age:23},
+                {title: 'name of the wind',author:'Mithun',age:24 , img:'img/book.jpg'},
+                {title: 'the way of king',author:'Sonia',age:22 , img:'img/book1.jpg'},
+                {title: 'the final empire',author:'MS',age:23, img:'img/images.jpeg'},
 
             ]
         }
