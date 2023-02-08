@@ -22,15 +22,27 @@
     <h1>Hello, Vue :)</h1>
 
       <div id="app">
-        <div v-if="showbooks">
+        <!-- <div v-if="showbooks">
         <h1>{{title}} - {{author}} - {{age}}</h1>
-       </div>
+       </div> -->
       
+       <div v-if="showbooks">
+            <ul>
+              <li v-for="book in books">
+                <h3>{{ book.title }}</h3>
+                <h4>{{ book.author }}</h4>
+                <p>{{ book.age }}</p>
+
+
+
+              </li>
+            </ul>
+       </div>
        <button @click="toggleShow">
         <span v-if="showbooks">Hide Books</span>
         <span v-else>Show Books</span>
-       </button>
-       <div v-show="showbooks">currently showing books</div>
+       </button><br>
+       <div v-show="showbooks">currently showing books</div><br>
 
         <button @click="age++">Increase Age</button>
         <button @click="age--">Decrease Age</button>
@@ -39,10 +51,10 @@
         <br>
 
         <!-- mouse events -->
-        <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
+        <div class="box" @mouseover="handleEvent($event,5)">mouseover (enter)</div>
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
         <div class="box" @dblclick="handleEvent ">doubleclick </div>
-        <div class="box"></div> 
+        <div class="box" @mousemove="handleMouse">Mousmove - {{x}} - {{y}}</div> 
 
        
       </div>
