@@ -37,6 +37,10 @@ const app=Vue.createApp({
         handleMouse(e){
             this.x=e.offsetX
             this.y=e.offsetY
+        },
+        toggleFav(book){
+            book.isFav =! book.isFav
+
         }
     },
 
